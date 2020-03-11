@@ -21,24 +21,26 @@ export class AppComponent {
   
   constructor() {
     
-    this.palabraOculta = '_ '.repeat(this.palabra.length);
-    this.palabraOculta = this.palabraOculta.substring(0, this.palabraOculta.length-1);
-
+    this.palabraOculta = '_'.repeat(this.palabra.length);
+    
   }
 
   comprobar(letra) {
 
     this.existeLetra(letra);
     
-    const palabraOcultaArr = this.palabraOculta.split(' ');
+    const palabraOcultaArr = this.palabraOculta.split('');
 
     for (let i = 0; i< this.palabra.length; i++){
+    //   console.log(`letra: ${letra}, palabra[i]: ${this.palabra[i]}`);
       if (this.palabra[i] === letra) {
         palabraOcultaArr[i] = letra;
+
+      //  console.log(`oculta[i] ${oculta[i]}- ${palabraOcultaArr[i]}`);
       }
     };
 
-      this.palabraOculta = palabraOcultaArr.join(' ');
+      this.palabraOculta = palabraOcultaArr.join('');
       this.verificaGane();
   }
 
@@ -58,12 +60,13 @@ export class AppComponent {
   }
 
   existeLetra(letra) {
-    if (this.palabra.indexOf(letra) >= 0 ){
-      // console.log('Bien ' + letra);
-    } else {
-      // console.log('Letra no encontrada ' + letra);
+    if (this.palabra.indexOf(letra) < 0 ){
+      ///console.log('pulsaste' + letra);
       this.intentos++;
-    }
+    } else {
+     console.log('Letra encontrada ' + letra);
+      
+     }
   }
 
 }
