@@ -20,9 +20,7 @@ export class AppComponent {
             'U', 'V', 'W', 'X', 'Y', 'Z'];
   
   constructor() {
-    
     this.palabraOculta = '_'.repeat(this.palabra.length);
-    
   }
 
   comprobar(letra) {
@@ -32,11 +30,8 @@ export class AppComponent {
     const palabraOcultaArr = this.palabraOculta.split('');
 
     for (let i = 0; i< this.palabra.length; i++){
-    //   console.log(`letra: ${letra}, palabra[i]: ${this.palabra[i]}`);
       if (this.palabra[i] === letra) {
         palabraOcultaArr[i] = letra;
-
-      //  console.log(`oculta[i] ${oculta[i]}- ${palabraOcultaArr[i]}`);
       }
     };
 
@@ -69,4 +64,12 @@ export class AppComponent {
      }
   }
 
+  newGame(){
+    this.palabra ='SECRETO';
+    this.palabraOculta = '_'.repeat(this.palabra.length);
+    this.intentos = 0;
+    this.gano = false;
+    this.perdio = false;
+    console.log(this.palabra, this.intentos, this.gano, this.perdio, this.palabraOculta);
+  }
 }
