@@ -18,6 +18,7 @@
   <div class="col text-center">
     <h1>¡Felicidades GANASTE!</h1>
     <h4>:D</h4>
+    <button (click)="newGame()" class="btn btn-primary">Jugar de nuevo</button>
   </div>
 </div>
 
@@ -25,7 +26,11 @@
   <div class="col text-center">
     <h1>Perdiste :(</h1>
     <h4>La palabra era {{palabra}}</h4>
+    <button (click)="newGame()" class="btn btn-primary">Inténtalo otra vez</button>
   </div>
+  
+  
+  
 </div>
 
 
