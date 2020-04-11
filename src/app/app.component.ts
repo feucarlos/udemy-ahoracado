@@ -8,7 +8,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class AppComponent {
 
-  palabra ='SECRETO';
+  palabra = this.nuevaPalabra();
   palabraOculta = '';
   intentos = 0;
   gano = false;
@@ -65,11 +65,23 @@ export class AppComponent {
   }
 
   newGame(){
-    this.palabra ='SECRETO';
+    this.palabra = this.nuevaPalabra();
     this.palabraOculta = '_'.repeat(this.palabra.length);
     this.intentos = 0;
     this.gano = false;
     this.perdio = false;
-    console.log(this.palabra, this.intentos, this.gano, this.perdio, this.palabraOculta);
+    //console.log(this.palabra, this.intentos, this.gano, this.perdio, this.palabraOculta);
   }
+  
+  nuevaPalabra(){ 
+    const palabras = ['PROGRAMA', 'SALUDAR', 'COMPUTADORA', 'INTERNET', 'LENGUAJE', 'TECLADO', 
+    'PROGRAMADOR', 'BOTELLA', 'CUADERNO', 'TOALLA', 'LIBRO', 'MOCHILA', 'ESCUELA', 'BICICLETA',
+    'PANTALLA', 'CUERPO', 'PELIGRO', 'DESAYUNO', 'ZAPATO', 'DEPORTE', 'INTERNET', 'ESTUFA',
+    'UNIVERSO', 'PLANETA', 'SISTEMA', 'MURCIELAGO'];
+ 
+    let i = Math.floor(Math.random() * palabras.length);
+    console.log('i: '+ i + '; palabras[i]:' + palabras[i]);
+    return  palabras[i];
+}
+  
 }
