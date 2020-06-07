@@ -99,15 +99,15 @@ export class AppComponent {
     'esfuerzo', 'lugar', 'movimiento', 'velocidad', 'tamaño', 'longitud', 'altura', 'celular', 'teclado', 'estufa',
     'ancho', 'aumento', 'crecimiento', 'fondo', 'frente', 'contenido', 'objeto', 'sector', 'palabra', 'secreto',
     'presente', 'pasado', 'futuro', 'actividad', 'programa', 'proyecto', 'capacidad', 'concepto', 'conjunto',
-    'grupo', 'origen', 'destino', 'realidad', 'problema', 'intento', 'solución', 'efecto', 'resultado', 'fracaso',
+    'grupo', 'origen', 'destino', 'realidad', 'problema', 'intento', 'efecto', 'resultado', 'fracaso',
     'causa', 'consecuencia', 'beneficio', 'perjuicio', 'calidad', 'desarrollo', 'progreso', 'avance', 'retroceso',
-    'mejora', 'principio', 'etapa', 'proceso', 'corte', 'interrupción', 'espera', 'diferencia', 'similitud',
+    'mejora', 'principio', 'etapa', 'proceso', 'corte',  'espera', 'diferencia', 'similitud',
     'sentido', 'vista', 'olfato', 'conciencia', 'existencia', 'experiencia', 'posibilidad', 'probabilidad',
-    'verdad', 'mentira', 'acierto', 'equivocación', 'necesidad', 'falta', 'significado', 'personalidad',
+    'verdad', 'mentira', 'acierto', 'necesidad', 'falta', 'significado', 'personalidad',
     'pensamiento', 'memoria', 'tristeza', 'aburrimiento', 'sorpresa', 'seguridad', 'confianza', 'ejemplo', 'internet'
    ];
 
-    console.log(`Total de palabras: ${palabras.length}`);
+    // console.log(`Total de palabras: ${palabras.length}`);
     let i = Math.floor(Math.random() * palabras.length);
     // console.log('i: '+ i + '; palabras[i]:' + palabras[i]);
     return palabras[i].toUpperCase();
