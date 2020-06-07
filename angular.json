@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ahorcado"
+    }
+  },
+  "defaultProject": "ahorcado",
+  "cli": {
+    "analytics": false
+  }
 }
